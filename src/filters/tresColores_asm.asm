@@ -1,0 +1,3 @@
+global tresColores_asm
+tresColores_asm:
+ret
