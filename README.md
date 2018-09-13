@@ -19,6 +19,7 @@ Para generar el PDF:
 ```
 make
 ```
+(desde la carpeta donde esté `informe.tex`, en este caso `doc`)
 
 ## Cómo usar este esqueleto en un TP
 
