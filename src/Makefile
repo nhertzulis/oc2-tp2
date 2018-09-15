@@ -33,7 +33,7 @@ $(BUILD_DIR)/%.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $< -lm
 
 clean:
-	rmdir $(BUILD_DIR)
+	rm -fr $(BUILD_DIR)
 	
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
