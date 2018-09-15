@@ -19,7 +19,7 @@ OBJS_CON_PATH = $(addprefix $(BUILD_DIR)/, $(OBJS))
 
 .PHONY: all clean FORCE
 
-all: $(BUILD_DIR)/$(BIN)
+all: $(BUILD_DIR) $(BUILD_DIR)/$(BIN)
 
 $(BUILD_DIR)/$(BIN): FORCE $(MAIN_OBJS_CON_PATH)
 	$(CC) $(CFLAGS) $(OBJS_CON_PATH) -o $@ -lm
@@ -33,8 +33,7 @@ $(BUILD_DIR)/%.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $< -lm
 
 clean:
-	rm -fr $(BUILD_DIR)/*
-
-
-
-
+	rmdir $(BUILD_DIR)
+	
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
