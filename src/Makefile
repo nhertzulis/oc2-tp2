@@ -36,4 +36,4 @@ clean:
 	rm -fr $(BUILD_DIR)
 	
 $(BUILD_DIR):
-	mkdir -p $(BUILD_DIR)
+	mkdir $(BUILD_DIR)
